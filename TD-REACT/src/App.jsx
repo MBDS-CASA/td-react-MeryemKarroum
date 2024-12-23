@@ -29,13 +29,14 @@ const MainContent = () => {
   );
 };
 
-function Footer(){
+function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
-    <footer>
-      Tous droits réservés - Meryem Karroum
+    <footer className="bg-gray-200 p-4 text-center">
+      <h5>© {currentYear} - Karroum Meryem, Tous droits réservés</h5>
     </footer>
   );
-};
+}
 
 function App() {
   const [count, setCount] = useState(0)
