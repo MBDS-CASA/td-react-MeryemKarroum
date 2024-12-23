@@ -13,9 +13,21 @@ function Header(){
   )
 }
 
-function MainContent(){
-  return(<h1>Ici, nous afficherons des informations interessantes :) </h1>)
-}
+const MainContent = () => {
+  const currentDate = new Date();
+  const day = currentDate.toLocaleDateString('fr-FR', { weekday: 'long' });
+  const month = currentDate.toLocaleDateString('fr-FR', { month: 'long' });
+  const year = currentDate.getFullYear();
+  const hours = currentDate.getHours().toString().padStart(2, '0');
+  const minutes = currentDate.getMinutes().toString().padStart(2, '0');
+  const seconds = currentDate.getSeconds().toString().padStart(2, '0');
+
+  return (
+    <main>
+      Bonjour, on est le {day}, {month}, {year} et il est {hours}:{minutes}:{seconds}
+    </main>
+  );
+};
 
 function Footer(){
   return (
