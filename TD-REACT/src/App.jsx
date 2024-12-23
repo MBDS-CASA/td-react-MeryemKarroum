@@ -16,6 +16,15 @@ function Header(){
 function MainContent(){
   return(<h1>Ici, nous afficherons des informations interessantes :) </h1>)
 }
+
+function Footer(){
+  return (
+    <footer>
+      Tous droits réservés - Meryem Karroum
+    </footer>
+  );
+};
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -43,6 +52,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <Footer></Footer>
     </>
   )
 }
